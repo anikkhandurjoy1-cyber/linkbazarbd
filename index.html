@@ -818,8 +818,9 @@ function bannerFanProducts(){
   return liveProducts().filter(p=>productThumb(p,300)).slice().sort((a,b)=>off(b)-off(a)).slice(0,3);
 }
 function bannerFanHTML(){
+  // Default banner shows only the LinkBazar logo emblem — no product photos on the banner.
+  return `<div class="gwb-emblem">${gMark('','#fff')}</div>`;
   const list=bannerFanProducts();
-  if(!list.length) return `<div class="gwb-emblem">${gMark('','#fff')}</div>`;
   return `<div class="gwb-fan">${list.map((p,i)=>{
     const d=discOf(p);
     return `<div class="gwb-card c${i}" onclick="event.stopPropagation();openDetail('${p._docId}')">
