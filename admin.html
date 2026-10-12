@@ -1948,7 +1948,7 @@ function handleImgUpload(input,slotIdx){
   }).catch(err=>{
     console.error(err);
     renderImgSlots();
-    toast('ছবি আপলোড করতে সমস্যা হয়েছে','var(--red)');
+    toast('ছবি আপলোড ফেইল: '+((err&&err.message)||'unknown'),'var(--red)');
   });
 }
 
@@ -2261,7 +2261,7 @@ function handleCatImgUpload(input){
   }).catch(err=>{
     console.error(err);
     cImgUploading=false; renderCatImgPrev();
-    toast('ছবি আপলোড করতে সমস্যা হয়েছে','var(--red)');
+    toast('ছবি আপলোড ফেইল: '+((err&&err.message)||'unknown'),'var(--red)');
   });
 }
 
@@ -2437,7 +2437,7 @@ function handleBannerImgUpload(input,slotIdx){
   }).catch(err=>{
     console.error(err);
     renderBannerImgSlots();
-    toast('ছবি আপলোড করতে সমস্যা হয়েছে','var(--red)');
+    toast('ছবি আপলোড ফেইল: '+((err&&err.message)||'unknown'),'var(--red)');
   });
 }
 
