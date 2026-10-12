@@ -878,7 +878,7 @@ const PRODUCTS_COL = db.collection('linkbazar_products');
 
 // ⚠️ Cloudinary (unsigned upload) — LinkBazar BD-র Cloudinary cloud name + unsigned preset বসান
 const CLOUDINARY_CLOUD_NAME = "skcbdo2l";
-const CLOUDINARY_UPLOAD_PRESET = "linkbazarbd-upload";
+const CLOUDINARY_UPLOAD_PRESET = "linkbazarbd";
 const CLOUDINARY_READY = !CLOUDINARY_CLOUD_NAME.startsWith('PASTE') && !CLOUDINARY_UPLOAD_PRESET.startsWith('PASTE');
 const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/"+CLOUDINARY_CLOUD_NAME+"/image/upload";
 const CLOUDINARY_VIDEO_UPLOAD_URL = "https://api.cloudinary.com/v1_1/"+CLOUDINARY_CLOUD_NAME+"/video/upload";
